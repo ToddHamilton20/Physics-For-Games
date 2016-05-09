@@ -28,8 +28,14 @@
     <Filter Include="Header Files\States">
       <UniqueIdentifier>{e300beb2-5983-4ae8-b03b-192952b134ba}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\States\Tools">
+    <Filter Include="Source Files\Tools">
       <UniqueIdentifier>{6ec884b4-0c03-49d1-9602-6e20520de6e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{6237c679-94c7-4b2a-9d7c-9eef68a7943d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics">
+      <UniqueIdentifier>{6ad4a5e6-aff9-4117-b4af-88183742a43a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -37,28 +43,25 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Window.cpp">
-      <Filter>Source Files\States\Tools</Filter>
+      <Filter>Source Files\Tools</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Timer.cpp">
-      <Filter>Source Files\States\Tools</Filter>
+      <Filter>Source Files\Tools</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Sprite.cpp">
-      <Filter>Source Files\States\Tools</Filter>
+      <Filter>Source Files\Tools</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Shader.cpp">
-      <Filter>Source Files\States\Tools</Filter>
+      <Filter>Source Files\Tools</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Gizmos.cpp">
-      <Filter>Source Files\States\Tools</Filter>
+      <Filter>Source Files\Tools</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Camera.cpp">
-      <Filter>Source Files\States\Tools</Filter>
+      <Filter>Source Files\Tools</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Button.cpp">
-      <Filter>Source Files\States\Tools</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\BaseApplication.cpp">
-      <Filter>Source Files\States</Filter>
+      <Filter>Source Files\Tools</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Engine.cpp">
       <Filter>Source Files\States</Filter>
@@ -69,11 +72,35 @@
     <ClCompile Include="..\src\gl_core_4_4.c">
       <Filter>Source Files\Libs</Filter>
     </ClCompile>
+    <ClCompile Include="..\dep\imgui\imgui.cpp">
+      <Filter>Source Files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dep\imgui\imgui_draw.cpp">
+      <Filter>Source Files\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GameState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MenuState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Colliders.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GameObject.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Mesh.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Transform.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PhysicsRenderer.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\BaseApplication.h">
-      <Filter>Header Files\States</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Engine.h">
       <Filter>Header Files\States</Filter>
     </ClInclude>
@@ -103,6 +130,36 @@
     </ClInclude>
     <ClInclude Include="..\src\gl_core_4_4.h">
       <Filter>Header Files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\BaseState.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dep\imgui\imgui.h">
+      <Filter>Header Files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GameState.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MenuState.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tiny_obj_loader.h">
+      <Filter>Header Files\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Colliders.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GameObject.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Mesh.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Transform.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PhysicsRenderer.h">
+      <Filter>Header Files\Physics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

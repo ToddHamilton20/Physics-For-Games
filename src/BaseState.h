@@ -1,18 +1,16 @@
 // Author:					Todd Hamilton
-// Last Change:				02/05/16
 // Description of File:		BaseApplication class. 
 
 #pragma once
 
 class Engine;
 
-// All applications should derive from this.
-class BaseApplication 
+class BaseState
 {
 public:
 
-	BaseApplication(Engine* a_engine) : engine(a_engine) {}
-	virtual ~BaseApplication() {}
+	BaseState(Engine* a_engine) : engine(a_engine) {}
+	virtual ~BaseState() {}
 
 	virtual bool Startup() = 0;
 	virtual void Shutdown() = 0;

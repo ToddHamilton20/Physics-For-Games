@@ -1,21 +1,19 @@
 #include "Engine.h"
-
-#include "MenuApplication.h"
 #include "Window.h"
+#include "BaseState.h"
 
-void Engine::Run(BaseApplication* a_state)
+void Engine::Run(BaseState* a_state)
 {
+	glfwInit();
+
 	PushState(a_state);
 	double prevTime = glfwGetTime();
 	double currTime = glfwGetTime();
 
-	glEnable(GL_BLEND);
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
 	while (stateStack.size() > 0)
 	{
 		currTime = glfwGetTime();
-		BaseApplication* state = stateStack[stateStack.size() - 1];
+		BaseState* state = stateStack[stateStack.size() - 1];
 		state->Update(currTime - prevTime);
 		glfwPollEvents();
 
@@ -28,9 +26,7 @@ void Engine::Run(BaseApplication* a_state)
 		}
 
 		glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
-
-		// NOT CLEARING DEPTH BUFFER, DEPTH BUFFER IS OFF.
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		state->Draw();
 		Window::GetInstance().SwapBuffers();
@@ -41,7 +37,7 @@ void Engine::Run(BaseApplication* a_state)
 		PopState();
 }
 
-void Engine::PushState(BaseApplication* a_state)
+void Engine::PushState(BaseState* a_state)
 {
 	stateStack.push_back(a_state);
 	a_state->Startup();
@@ -49,7 +45,7 @@ void Engine::PushState(BaseApplication* a_state)
 
 void Engine::PopState()
 {
-	BaseApplication* state = stateStack[stateStack.size() - 1];
+	BaseState* state = stateStack[stateStack.size() - 1];
 	stateStack.pop_back();
 	state->Shutdown();
 	delete state;

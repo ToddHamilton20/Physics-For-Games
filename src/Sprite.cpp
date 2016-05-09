@@ -2,11 +2,12 @@
 
 #include "gl_core_4_4.h"
 #include "Camera.h"
-#include "Defines.h"
 
 #include <iostream>
 #include <glm\glm.hpp>
 #include <glm\ext.hpp>
+
+#include "Window.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
@@ -197,8 +198,12 @@ void Sprite::DrawAt(Camera* a_camera, int a_shader, const glm::vec2& a_position,
 
 void Sprite::DrawAtScreen(int a_shader, const glm::vec2& a_position, const glm::vec2& a_size, float a_rotation, float a_alpha) const
 {
-	Camera* camera = new Camera(SCREEN_X, SCREEN_Y);
-	camera->SetPos(glm::vec2(SCREEN_X / 2.0f, SCREEN_Y / 2.0f));
+	glm::vec2 windowSize;
+
+	Window::GetInstance().GetSize(&windowSize.x, &windowSize.y);
+
+	Camera* camera = new Camera(windowSize.x, windowSize.y);
+	camera->SetPos(glm::vec2(windowSize.x / 2.0f, windowSize.y / 2.0f));
 
 	if (!initialised)
 	{

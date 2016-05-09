@@ -19,30 +19,47 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\BaseApplication.cpp" />
+    <ClCompile Include="..\dep\imgui\imgui.cpp" />
+    <ClCompile Include="..\dep\imgui\imgui_draw.cpp" />
     <ClCompile Include="..\src\Button.cpp" />
     <ClCompile Include="..\src\Camera.cpp" />
+    <ClCompile Include="..\src\Colliders.cpp" />
     <ClCompile Include="..\src\Engine.cpp" />
+    <ClCompile Include="..\src\GameObject.cpp" />
+    <ClCompile Include="..\src\GameState.cpp" />
     <ClCompile Include="..\src\Gizmos.cpp" />
     <ClCompile Include="..\src\gl_core_4_4.c" />
     <ClCompile Include="..\src\imgui_impl_glfw_gl3.cpp" />
+    <ClCompile Include="..\src\MenuState.cpp" />
+    <ClCompile Include="..\src\Mesh.cpp" />
+    <ClCompile Include="..\src\PhysicsRenderer.cpp" />
     <ClCompile Include="..\src\Shader.cpp" />
     <ClCompile Include="..\src\Source.cpp" />
     <ClCompile Include="..\src\Sprite.cpp" />
     <ClCompile Include="..\src\Timer.cpp" />
+    <ClCompile Include="..\src\Transform.cpp" />
     <ClCompile Include="..\src\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\BaseApplication.h" />
+    <ClInclude Include="..\dep\imgui\imgui.h" />
+    <ClInclude Include="..\src\BaseState.h" />
     <ClInclude Include="..\src\Button.h" />
     <ClInclude Include="..\src\Camera.h" />
+    <ClInclude Include="..\src\Colliders.h" />
     <ClInclude Include="..\src\Engine.h" />
+    <ClInclude Include="..\src\GameObject.h" />
+    <ClInclude Include="..\src\GameState.h" />
     <ClInclude Include="..\src\Gizmos.h" />
     <ClInclude Include="..\src\gl_core_4_4.h" />
     <ClInclude Include="..\src\imgui_impl_glfw_gl3.h" />
+    <ClInclude Include="..\src\MenuState.h" />
+    <ClInclude Include="..\src\Mesh.h" />
+    <ClInclude Include="..\src\PhysicsRenderer.h" />
     <ClInclude Include="..\src\Shader.h" />
     <ClInclude Include="..\src\Sprite.h" />
     <ClInclude Include="..\src\Timer.h" />
+    <ClInclude Include="..\src\tiny_obj_loader.h" />
+    <ClInclude Include="..\src\Transform.h" />
     <ClInclude Include="..\src\Window.h" />
   </ItemGroup>
   <ItemGroup>
