@@ -8,7 +8,7 @@ class Collider
 public:
 	virtual ~Collider() = 0;
 	inline Transform GetTransform() { return transform; }
-	inline Transform SetTransform(Transform a_transform) { transform = a_transform; }//dgdfgedrhth
+	inline Transform SetTransform(Transform a_transform) { transform = a_transform; }
 
 private:
 	Transform transform;
